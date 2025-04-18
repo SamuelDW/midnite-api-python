@@ -29,3 +29,5 @@ archive.zip
 # macOS
 .DS_Store
 test_db.db
+
+data/

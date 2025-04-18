@@ -1,5 +1,5 @@
 from typing import List
-from transactions import Transaction
+from app.transactions import Transaction
 
 def has_withdrawn_three_times_in_a_row(transactions: List[Transaction]) -> bool:
     if len(transactions) < 3:

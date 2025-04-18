@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-class Event(BaseModel):
+class RequestData(BaseModel):
     user_id: int
     type: str
     time: int

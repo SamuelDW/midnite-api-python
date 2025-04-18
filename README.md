@@ -8,7 +8,7 @@ I've used FastAPI as I've been interested in this one for a while, and thought i
 
 ## Setup 
 1. I've used Python 3.10, FastAPI
-2. I think you need to run pip install to install, there is a requirements.txt in the folder so think that should cover it.
+2. I think you need to run pip install to install, there is a `requirements.txt` and `pyproject.toml` in the folder so think that should cover it.
 2. There is a test.db database for this project, so shouldn't need to fiddle around setting up databases.
 3. Create a user using the `/user` endpoint 
 
@@ -83,11 +83,13 @@ show my understanding of Python 3.10 and FastAPI.
 7. Start moving things out into their own files, keeping the route slimmer, and things grouped in a way that seems relevant. 
 8. Make sure that things are working as intended, sending through deposits and withdrawals and making sure things throw in the same way
 9. Look into some basic tests
+10. Optimizations, reducing number of query statements for transactions, could be done with one function with optional params. Added try catch blocks on creating users
+11. Creating a better folder structure, creating app to hold the main structure, and to make testing easier, in line with better practices
 
 ### Issues and Challenges
 1. Setting up SQLite seemed a bit off, would prefer a fully fletched database but I think that as I'm handing in two solutions, the one I'm less experienced in gets a simpler set up
 2. Writing the setup instructions, I'm used to composer which tends to write all the files needed automatically, I see that python is ever so slightly more complex than this, which isn't a problem, it's one more thing to learn!
-3. Slightly different syntax, took a moment to get and or rather than && and ||
+3. Slightly different syntax, took a moment to get and or rather than && and || but its nice at the same time.
 
 
 ## Improvements
