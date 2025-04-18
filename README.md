@@ -1,16 +1,16 @@
 # Midnite API Task Python
+This is a Python version of the challenge I was sent. 
 
-Im adding this in to show that I can use python, even if it is not the most well layed out code.
+I am primarily a PHP developer, but I have made this one in addtion to show that I can be and am a very quick learner. 
 
-To add, this is the first time I have used python, I kept to best practises that I usually follow in PHP. Functions should do one thing only, return early.
-
-I've used FastAPI as I've been interested in this one for a while, and thought it would be nice to take a crack at it. It was really enjoyable learning this one, I love the syntax and seems a lot nicer than PHP at times. 
+I've used FastAPI as I've been interested in this one for a while, and thought it would be nice to take a crack at it. It was really enjoyable learning this one, I love the syntax and seems a lot nicer than PHP at times, and of course offers a great range of applications than PHP is able to.
 
 ## Setup 
-1. I've used Python 3.10, FastAPI
+1. I've used Python 3.10, FastAPI, pytest and SQLModel
 2. I think you need to run `pip install .` to install, there is a `requirements.txt` and `pyproject.toml` in the folder so think that should cover it.
 2. There is a test.db database for this project, so shouldn't need to fiddle around setting up databases.
 3. Create a user using the `/user` endpoint 
+4. You should be able to run tests with `pytest`
 
 
 ## Assumptions
