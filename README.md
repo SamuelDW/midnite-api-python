@@ -8,7 +8,7 @@ I've used FastAPI as I've been interested in this one for a while, and thought i
 
 ## Setup 
 1. I've used Python 3.10, FastAPI
-2. I think you need to run pip install to install, there is a `requirements.txt` and `pyproject.toml` in the folder so think that should cover it.
+2. I think you need to run `pip install .` to install, there is a `requirements.txt` and `pyproject.toml` in the folder so think that should cover it.
 2. There is a test.db database for this project, so shouldn't need to fiddle around setting up databases.
 3. Create a user using the `/user` endpoint 
 

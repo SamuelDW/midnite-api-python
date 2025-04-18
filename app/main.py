@@ -1,5 +1,6 @@
 from fastapi import Depends, FastAPI, HTTPException
 from sqlmodel import Session
+from contextlib import asynccontextmanager
 
 from app.transactions import create_transaction, get_transactions_by_user
 from app.request_data import RequestData
@@ -8,11 +9,13 @@ from app.alert_checks import has_withdrawn_three_times_in_a_row, has_deposited_g
 from app.database import create_db_and_tables, SessionDep, get_session
 
 
-app = FastAPI()
-
-@app.on_event("startup")
-def startup():
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup
     create_db_and_tables()
+    yield
+
+app = FastAPI(lifespan=lifespan)
 
 @app.post("/user")
 def create_new_user_in_db(user: User, session: SessionDep):

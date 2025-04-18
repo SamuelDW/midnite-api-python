@@ -2,7 +2,7 @@ from typing import Annotated
 from sqlmodel import SQLModel, Session, create_engine
 from fastapi import Depends
 
-sqlite_file_name = "prod.db"
+sqlite_file_name = "production.db"
 sqlite_url = f"sqlite:///data/{sqlite_file_name}"
 
 connect_args = {"check_same_thread": False}

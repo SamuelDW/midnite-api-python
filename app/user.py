@@ -4,7 +4,7 @@ from sqlmodel import Field, Session, SQLModel
 class User(SQLModel, table=True):
     id: int | None = Field(primary_key=True, default=None)
     name: str = Field(index=True)
-    total: float | None = Field(default=0)
+    total: float | None = Field(default=0, ge=0)
     
 def create_user(user: User, session: Session) -> User|None:
     try:
