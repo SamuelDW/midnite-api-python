@@ -85,15 +85,17 @@ show my understanding of Python 3.10 and FastAPI.
 9. Look into some basic tests
 10. Optimizations, reducing number of query statements for transactions, could be done with one function with optional params. Added try catch blocks on creating users
 11. Creating a better folder structure, creating app to hold the main structure, and to make testing easier, in line with better practices
-12. Creating the rest of the tests
+12. Creating the rest of the tests. 
 
 ### Issues and Challenges
 1. Setting up SQLite seemed a bit off, would prefer a fully fletched database but I think that as I'm handing in two solutions, the one I'm less experienced in gets a simpler set up
 2. Writing the setup instructions, I'm used to composer which tends to write all the files needed automatically, I see that python is ever so slightly more complex than this, which isn't a problem, it's one more thing to learn!
 3. Slightly different syntax, took a moment to get and or rather than && and || but its nice at the same time.
 4. Understanding imports from tests and app, bit confusing but got there in the end!
+5. I wasn't quite able to stop the `/user` endpoint not being able to accept negative amounts, despite the model having the `ge=0` requirement, though from some research should be solved by having a schemas file and using the pydantic model there to create the model from the request data, this should allow errors to be caught properly.
 
 ## Improvements
-1. Use BackgroundTasks from FastAPI, I could say transaction recieved, and then process the checks and then return a full response. 
-2. It's a small API, so I don't need to use async functions, but if I wanted to improve ability to handle heavier loads, I should use async functions in various places, most likely around the database calls.
+1. Use BackgroundTasks from FastAPI, I could say transaction recieved, and then process the checks and then return a full response, however for such a small API this would be premature optimization. 
+2. It's a small API, so I don't need to use async functions, but if I wanted to improve ability to handle heavier loads, I should use async functions in various places, most likely around the database calls which tend to be blocking.
 3. Perhaps a slightly improved folder structure, more domain oriented perhaps instead, so perhaps users, transactions, events (might need another name for conflict)
+4. Schemas for creating entities, so that errors are caught properly and things can be dealt with properly.
